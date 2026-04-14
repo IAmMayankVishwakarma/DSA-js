@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>1589765.123</h1>
+  <p id="currency"></p>
+  <script>
+
+    function formatIndianCurrency(numStr) {
+      // 1. Separate decimal part
+      let [integerPart, decimalPart] = numStr.split('.');
+      let result = "";//165
+      let count = 0;
+      let isFirstComma = true;
+      let i = integerPart.length - 1;
+
+      for (i; i >= 0; i--) {
+        result = integerPart[i] + result;
+        count++;//2
+        if (isFirstComma) {
+        
+          if (count === 3 && i !== 0) {
+            result = "," + result;
+            count = 0;
+            isFirstComma = false;
+          }
+
+        } else {
+          if (count === 2 && i !== 0) {
+            result = "," + result;
+            count = 0;
+          }
+        }
+      }
+
+      let finalAmount = "₹" + result;
+      if (decimalPart) {
+        finalAmount += "." + decimalPart;
+      }
+
+      return finalAmount;
+    }
+    let display = document.querySelector("#currency")
+    display.innerText = formatIndianCurrency("1589765.123")
+    // Testing
+    console.log(formatIndianCurrency("1589765.123")); // Output: ₹15,00,000.50
+    // console.log(formatIndianCurrency("1000"));      // Output: ₹1,000
+
+  </script>
+</body>
+
+</html>
