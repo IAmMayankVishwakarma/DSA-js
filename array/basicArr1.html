@@ -46,10 +46,19 @@ console.log(maxNum);
    </script> -->
    <!-- second max element -->
    <script>
-    let arr  = [51,32,63,4,35,66,17,89];
-    let firstMax = arr[0];
-    let secondMax = arr[1];
-    
+    let arr  = [32,51,63,4,35,66,17,89];
+    let firstMax =  Math.max(arr[0], arr[1]);
+    let secondMax = Math.min(arr[0], arr[1]);
+    for (let i = 2; i < arr.length; i++) {
+      if(firstMax < arr[i]){
+        secondMax = firstMax;
+        firstMax = arr[i];
+      }else if(arr[i] >secondMax && arr[i] < firstMax){
+       secondMax = arr[i];
+      }
+      console.log(firstMax, secondMax);
+      
+    }
    </script>
 </body>
 </html>
