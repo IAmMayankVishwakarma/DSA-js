@@ -59,3 +59,14 @@ console.log(sum);
 let total = sumArray.reduce((prev, next) => prev + next, 0); // without this {} return is implmented
 console.log(total.toFixed(2))
 
+//============================================================
+// reverse array with extra space
+let myArr = [10,20,30,40,50,60,70];
+let tempArr = new Array(myArr.length);
+let j = 0;
+for(let i = myArr.length -1; i>=0; i-- ){
+    tempArr[j] = myArr[i];
+    j++ ;
+
+}
+console.log(tempArr);
