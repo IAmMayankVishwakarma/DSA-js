@@ -70,3 +70,16 @@ for(let i = myArr.length -1; i>=0; i-- ){
 
 }
 console.log(tempArr);
+//=======================================================
+//without any extra space (two pointer technique)
+let myArr = [10, 20, 30, 40, 50, 60, 70];
+let i = 0;
+let j = myArr.length - 1;
+while (i < j) {
+  let temp = myArr[i];
+  myArr[i] = myArr[j];
+  myArr[j] = temp;
+  i++;
+  j--;
+}
+console.log(myArr)   
