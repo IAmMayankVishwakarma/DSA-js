@@ -83,3 +83,24 @@ while (i < j) {
   j--;
 }
 console.log(myArr)   
+//=======================================================
+// shift all 1 to left side
+
+//=======================================================
+// shift all 1 to right  side
+//=======================================================
+// shift each element to left side
+
+//=======================================================
+// shift each element to right side
+
+//=======================================================
+// shift each element to right / left side by k times == arr(i+k) % length
+
+//=======================================================
+// shift each element to right / left  side by block- reversal method
+
+//leetcode problem 26 remove duplicates from sorted arrays  without taking extra space
+
+
+//
