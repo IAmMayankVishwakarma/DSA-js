@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>stress Based Questions </title>
+</head>
+<body>
+  <script>
+    //========================
+    console.log(typeof(NaN));
+    /* Ans - Number 
+     Reason ---- JavaScript ke andar sirf ek numeric type hota hai — Number
+Isme yeh sab aate hain:
+
+Normal numbers → 10, 3.14, -5
+Special values → Infinity, -Infinity, NaN
+
+Isliye:
+
+typeof 10        // "number"
+typeof Infinity // "number"
+typeof NaN      // "number"
+    */
+
+  // ===================================
+  let a  = {} + []
+  console.log(a);
+
+/* Ans - [object Object]  and type is string 
+   Reason - {} at the beginning is parsed as a block,
+and when used as an expression, objects and arrays are converted to strings,
+resulting in "[object Object]".
+
+*/
+  </script>
+</body>
+</html>
