@@ -103,4 +103,6 @@ console.log(myArr)
 //leetcode problem 26 remove duplicates from sorted arrays  without taking extra space
 
 
-//
+//merge sorted array 
+
+//leet code 121 best time to buy and sell the stock
