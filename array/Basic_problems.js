@@ -85,9 +85,16 @@ while (i < j) {
 console.log(myArr)   
 //=======================================================
 // shift all 1 to left side
-
+let arr = [0, 1, 2, 3, 4, 5];
+// output [1,2,3,4,5,0];
+let copy = arr[0];
+for (let i = 0; i < arr.length; i++) {
+  arr[i] = arr[i + 1];
+}
+arr[arr.length - 1] = copy
+console.log(arr);
 //=======================================================
-// shift all 1 to right  side
+// shift all 1 to right side
 //=======================================================
 // shift each element to left side
 
