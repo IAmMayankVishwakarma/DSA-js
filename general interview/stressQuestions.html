@@ -33,6 +33,38 @@ and when used as an expression, objects and arrays are converted to strings,
 resulting in "[object Object]".
 
 */
+//===========================================
+function abc(){
+  return {
+    a:1
+  }
+}
+console.log(abc());
+/*
+Ans == this returns object
+condition 
+function abc(){
+  return 
+  {
+    a:1
+  }
+}
+console.log(abc());
+Now this is giving undefind because of auto semicolon insertion js just put a semicolon after return so object is going to out of focus 
+ 
+*/
+let arr = [0,1,3,100];
+arr[5] = 100;
+
+console.log(arr);
+console.log(`length of arr ${arr.length}`);
+/*
+Ans - 6 and other space will be empty in memory
+remember it is not conting index of the array
+*/
+// find duplicate number in array
+let nums  = [10, 20,10,30, 50 ,60]
+
   </script>
 </body>
 </html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data Types of JavaScript</title>
+</head>
+<body>
+    <h1> Data Types of JavaScript</h1>
+    <script>
+    /*
+    Primitive datatypes
+    String
+Number
+BigInt
+Boolean
+Undefined
+Null
+Symbol
+
+Non Primitive Data Types
+Object ,Array ,Date
+    */
+        console.log(typeof([])); // object
+        console.log(typeof({})); // object
+        console.log(typeof(new Date())); // object
+        console.log(typeof(null)); // object (This is a bug in JS)
+        console.log([]+[]) // empty array + empty array == empty string
+        console.log({}+{}) // "" + "" == empty string (object are ignore) 
+        console.log(+true); // 1
+        console.log(++true); // 2       
+        console.log(+false); // 0
+        console.log(++false); // 1
+        console.log(++[[]]); // 1
+        console.log(+[]); // 0
+        console.log(-[]) ;// 0
+        
+
+
+    </script>
+</body>
+</html>
