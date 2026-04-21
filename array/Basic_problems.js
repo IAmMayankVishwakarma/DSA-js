@@ -95,12 +95,14 @@ arr[arr.length - 1] = copy
 console.log(arr);
 //=======================================================
 // shift all 1 to right side
-//=======================================================
-// shift each element to left side
+// output = [4,0,1,2,3,]
+let copy = arr[arr.length - 1];
+for (let i = arr.length - 1; i >= 0; i--) {
 
-//=======================================================
-// shift each element to right side
-
+  arr[i] = arr[i - 1];
+}
+arr[0] = copy;
+console.log(arr);
 //=======================================================
 // shift each element to right / left side by k times == arr(i+k) % length
 
