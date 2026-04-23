@@ -115,3 +115,5 @@ console.log(arr);
 //merge sorted array 
 
 //leet code 121 best time to buy and sell the stock
+
+// sort the color leet code problem  75

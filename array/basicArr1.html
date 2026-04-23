@@ -8,9 +8,14 @@
 <body style="background-color: black;">
 <!-- <script src="Basic_problems.js"></script> -->
  <script>
-  // shift all 1 to rght side
+  // shift each element to right / left side by k times == arr(i+k) % length
   let arr  = [0,1,2,3,4]
-  
+  let k =2;
+  for (let i=0; i<arr.length-1; i++) {
+    let index = (i+k)% arr.length;
+    arr[i] = arr[index];
+  }
+console.log(arr)
 </script>
 </body>
 </html>
