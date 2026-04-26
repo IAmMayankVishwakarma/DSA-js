@@ -117,3 +117,10 @@ console.log(arr);
 //leet code 121 best time to buy and sell the stock
 
 // sort the color leet code problem  75
+
+//maximum subarray/ kedanth subarrays 
+
+// moores voting algorithem/ majority element
+
+
+// traping rain water
