@@ -1,1 +1,7 @@
-https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String
+
+let s = "Hello My Name is AI";
+//lenght
+console.log(s.length);
+//slice method
+console.log(s.slice(2, 6));
+// substring
