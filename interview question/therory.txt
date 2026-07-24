@@ -1,0 +1,32 @@
+====================================Laravel========================================================
+1. jos and queues , Queue aur Jobs kaise implement karte ho? Failed jobs handle kaise karte ho? (database , rabitmq and many more deep understanding);
+2. agar koi api ka response slow hai to use kese thik karoge 
+3. Eloquent ORM vs Query Builder - kab kya use karoge?
+4. Migrations aur seeders ka use samjhao?
+6. fresh aur refresh migration mein kya diffrence hai?
+7. mujhe 3 no ka migration rollback karna hai uski command kya hogi ? 
+8. Events aur Listeners kya hote hai aur ise kab aur kese implement karoge? 
+9. API authentication - Sanctum vs Passport explain karo
+10. jwt kese kaam karta hai tum ise authentication ke liye kese use karoge?
+11. hash aur encrypt mein kya diffrence hai?
+12. Laravel mein caching strategies (Redis, file cache) explain karo 
+13. Validation - Form Requests kaise use karte ho?
+14. suppose hamari website globally available hai agar admin koi product india mein update karta hai to america mein vhi product privious price mein show hota hai chache mein ise kese solve karoge?
+15. laravel ko multiple database se kese connect karte ho detail mein process batao
+16. 
+
+=================================livewire============================================================
+1. Livewire Kya Hai? Traditional Vue/API Approach se Kaise Different Hai?
+2. Livewire Lifecycle Hooks explain (mount(),hydrate(), updated(), )
+3. wire:model, wire:click, wire:loading
+4. Real-Time Validation
+5. Livewire + Vue Same Project
+6. Performance - Polling vs Events
+
+=======================================vuejs=========================================================
+1. Composition API vs Options API
+2. ref() vs reactive()
+3. Computed vs Watch
+4. Component Communication p-->child and child to parent
+5. Vue Lifecycle Hooks
+6. Vuex vs Pinia
