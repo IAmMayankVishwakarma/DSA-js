@@ -1,0 +1,215 @@
+1. Array se Duplicates Remove Karo?
+$array = [1,2,3,2,4,5,1];
+===========================================
+method one easy 
+===========================================
+$array = [1,2,3,2,4,5,1];
+$result = array_unique($array);
+print_r($result);
+==========================================
+Method 2 (Without Built-in) ⭐ Interview Favorite
+============================================
+$array = [1,2,3,2,4,5,1];
+
+$result = [];
+
+foreach ($array as $value) {
+
+    if (!in_array($value, $result)) {
+        $result[] = $value;
+    }
+
+}
+
+print_r($result);
+========================================================
+2. String Reverse Without Built-in
+========================================================
+$str = "Mayank";
+
+$reverse = "";
+
+for ($i = strlen($str)-1; $i >= 0; $i--) {
+
+    $reverse .= $str[$i];
+
+}
+
+echo $reverse;
+=========================================================
+3. Count Character Frequency
+=========================================================
+$str = "banana";
+
+$count = [];
+
+for($i=0;$i<strlen($str);$i++){
+
+    if(isset($count[$str[$i]])){
+        $count[$str[$i]]++;
+    }else{
+        $count[$str[$i]]=1;
+    }
+
+}
+
+print_r($count);
+======================================================
+4. Palindrome
+======================================================
+$str="madam";
+
+$rev="";
+
+for($i=strlen($str)-1;$i>=0;$i--){
+
+    $rev.=$str[$i];
+
+}
+
+echo $str==$rev ? "Palindrome":"Not";
+=======================================================
+method 2 
+=======================================================
+$str = "madam";
+
+$left = 0;
+$right = strlen($str) - 1;
+
+$isPalindrome = true;
+
+while ($left < $right) {
+    if ($str[$left] != $str[$right]) {
+        $isPalindrome = false;
+        break;
+    }
+    $left++;
+    $right--;
+}
+
+echo $isPalindrome ? "Palindrome" : "Not Palindrome";
+========================================================
+5. Second Largest Number
+========================================================
+   $array=[10,50,30,80,20];
+
+rsort($array);
+
+echo $array[1];
+
+========================================================
+1. Array se Duplicate Values Remove (Without array_unique())
+=========================================================
+$array = [1,2,3,2,4,5,1];
+
+$result = [];
+
+foreach ($array as $value) {
+    if (!in_array($value, $result)) {
+        $result[] = $value;
+    }
+}
+
+print_r($result);
+==========================================================
+method 2 optimize and fast 
+==========================================================
+$array = [1,2,3,2,4,5,1];
+
+$seen = [];
+$result = [];
+
+foreach ($array as $value) {
+    if (!isset($seen[$value])) {
+        $seen[$value] = true;
+        $result[] = $value;
+    }
+}
+
+print_r($result);
+=================================================
+3. Two Arrays ka Intersection( find common number )
+===================================================
+$array1 = [1,2,3,4];
+$array2 = [3,4,5,6];
+
+$result = [];
+
+foreach ($array1 as $value) {
+    if (in_array($value, $array2)) {
+        $result[] = $value;
+    }
+}
+
+print_r($result);
+======================================================
+4. find array diffrence
+======================================================
+$array1 = [1,2,3,4];
+$array2 = [3,4,5];
+
+$result = [];
+
+foreach ($array1 as $value) {
+    if (!in_array($value, $array2)) {
+        $result[] = $value;
+    }
+}
+
+print_r($result);
+=======================================================
+sort a array without any built in function 
+=====================================================
+$array = [5,2,9,1,7];
+
+$n = count($array);
+
+for ($i = 0; $i < $n - 1; $i++) {
+
+    for ($j = 0; $j < $n - $i - 1; $j++) {
+
+        if ($array[$j] > $array[$j + 1]) {
+
+            $temp = $array[$j];
+            $array[$j] = $array[$j + 1];
+            $array[$j + 1] = $temp;
+        }
+    }
+}
+
+print_r($array); 
+=========================================================================
+7. Word Frequency Count
+==========================================================================
+$string = "php laravel php vue php vue";
+
+$words = explode(" ", $string);
+
+$count = [];
+
+foreach ($words as $word) {
+
+    if (isset($count[$word])) {
+        $count[$word]++;
+    } else {
+        $count[$word] = 1;
+    }
+
+}
+
+print_r($count);
+===================================================================
+Reverse Array
+===================================================================
+$array = [1,2,3,4];
+
+$result = [];
+
+for ($i = count($array)-1; $i >= 0; $i--) {
+    $result[] = $array[$i];
+}
+
+print_r($result);
+=======================================================================
+Find Maximum
+=======================================================================

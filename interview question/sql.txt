@@ -1,0 +1,4 @@
+1. Top 5 products Product::orderBy('price','desc')->take(5)->get();
+2. Latest 10 Orders Order::latest()->limit(10)->get();
+3. Between Dates Order::whereBetween('created_at',[$from,$to])->get();
+4. 
