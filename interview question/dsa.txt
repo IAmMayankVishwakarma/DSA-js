@@ -213,3 +213,77 @@ print_r($result);
 =======================================================================
 Find Maximum
 =======================================================================
+$array = [5,9,2,11,6];
+
+$max = $array[0];
+
+foreach ($array as $value) {
+
+    if ($value > $max) {
+        $max = $value;
+    }
+
+}
+
+echo $max;
+=================================================================
+Find Second Largest
+=================================================================
+$array = [10,50,20,80,40];
+
+$first = PHP_INT_MIN;
+$second = PHP_INT_MIN;
+
+foreach ($array as $num) {
+
+    if ($num > $first) {
+        $second = $first;
+        $first = $num;
+    } elseif ($num > $second && $num != $first) {
+        $second = $num;
+    }
+}
+
+echo $second;
+=======================================================
+Count Vowels
+=======================================================
+$str = "Laravel";
+
+$count = 0;
+
+$vowels = ['a','e','i','o','u'];
+
+foreach (str_split(strtolower($str)) as $ch) {
+
+    if (in_array($ch, $vowels)) {
+        $count++;
+    }
+
+}
+
+echo $count;
+===============================================
+Anagram Check
+===============================================
+$str1 = "listen";
+$str2 = "silent";
+
+echo count_chars($str1,1) == count_chars($str2,1)
+    ? "Anagram"
+    : "Not";
+================================================
+Reverse String (Without strrev())
+================================================
+<?php
+
+$str = "Mayank";
+
+$reverse = "";
+
+for ($i = strlen($str) - 1; $i >= 0; $i--) {
+    $reverse .= $str[$i];
+}
+
+echo $reverse;
+=====================================================

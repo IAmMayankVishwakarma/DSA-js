@@ -1,4 +1,76 @@
 1. Top 5 products Product::orderBy('price','desc')->take(5)->get();
 2. Latest 10 Orders Order::latest()->limit(10)->get();
 3. Between Dates Order::whereBetween('created_at',[$from,$to])->get();
-4. 
+4. Find Duplicate Emails
+SELECT email, COUNT(*) AS total
+FROM employees
+GROUP BY email
+HAVING COUNT(*) > 1;
+5. Delete Duplicate Records
+DELETE e1
+FROM employees e1
+JOIN employees e2
+ON e1.email = e2.email
+AND e1.id > e2.id;
+6. Second Highest Salary
+SELECT MAX(salary) AS second_highest
+FROM employees
+WHERE salary <
+(
+SELECT MAX(salary)
+FROM employees
+);
+7. Third Highest Salary
+SELECT DISTINCT salary
+FROM employees
+ORDER BY salary DESC
+LIMIT 1 OFFSET 2;
+8.Highest Salary Department Wise
+SELECT department,
+MAX(salary)
+FROM employees
+GROUP BY department;
+9.Employees Without Orders
+SELECT *
+FROM users
+LEFT JOIN orders
+ON users.id=orders.user_id
+WHERE orders.id IS NULL;
+10. Total Orders Per User
+SELECT users.name,
+COUNT(orders.id) total_orders
+FROM users
+LEFT JOIN orders
+ON users.id=orders.user_id
+GROUP BY users.id;
+11. Last 30 Days Orders
+SELECT *
+FROM orders
+WHERE created_at >= DATE_SUB(NOW(), INTERVAL 30 DAY);
+12 Top 5 Highest Paid Employees
+SELECT *
+FROM employees
+ORDER BY salary DESC
+LIMIT 5;
+13. Find Nth Highest Salary
+SELECT DISTINCT salary
+FROM employees
+ORDER BY salary DESC
+LIMIT 1 OFFSET N-1;
+14. ACID Properties
+A → Atomicity
+C → Consistency
+I → Isolation
+D → Durability
+
+14. Normalization
+Normalization ka matlab:
+Database ko is tarah design karna ki data duplication kam ho aur consistency bani rahe.
+1NF --> No repeating columns.
+2NF---> Remove partial dependency.
+3NF----> Remove transitive dependency.
+
+15. what is indexes 
+
+16. how to optimize slow Query
+
